@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\UsersTable;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', UsersTable::class);
+
+// Route::get('/users', function () {
+//     return User::all();
+// });
